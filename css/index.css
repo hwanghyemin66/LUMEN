@@ -131,7 +131,7 @@ header .inner nav ul li a:hover {
     background-position: center;
 }
 
-#mb img {
+#mb img:first-child {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -505,11 +505,130 @@ header .inner nav ul li a:hover {
     display: none;
 }
 
+/*의료기기 소개*/
+.background{
+      background: url(../img/equipment_background.jpg);
+      background-repeat: no-repeat;
+}
+#equipment {
+    padding: 200px 0 130px 0;
+}
 
+#equipment .title_box {
+    color: #fff;
+}
 
+/* 의료기기 호버 */
+.eq_swiper_slide {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+}
 
+.eq_hover_box {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.eq_swiper_slide:hover .eq_hover_box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.eq_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.eq_title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.eq_tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    padding: 0;
+
+    width: 180px;
+    margin: 0 auto;
+}
+
+.eq_tags li {
+    border: 1px solid #fff;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 16px;
+}
+
+/* Swiper 컨테이너 */
+#equipment .eq_swiper {
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+/* 기본 트랜지션 */
+#equipment .eq_swiper_slide {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 1. 정가운데 (Active): 가장 위 */
+#equipment .eq_swiper .swiper-slide-active {
+    transform: translateY(-40px);
+    z-index: 5;
+}
+
+/* 2. 양옆 1단계 (3번째, 5번째) */
+#equipment .eq_swiper .swiper-slide-prev,
+#equipment .eq_swiper .swiper-slide-next {
+    transform: translateY(-20px);
+    z-index: 4;
+}
+
+/* 3. 양옆 2단계 (2번째, 6번째) */
+#equipment .eq_swiper .swiper-slide:has(+ .swiper-slide + .swiper-slide-active),
+#equipment .eq_swiper .swiper-slide-next+.swiper-slide {
+    transform: translateY(0px);
+    z-index: 3;
+}
+
+/* 4. 맨 양쪽 끝 3단계 (1번째, 7번째): 가장 아래 */
+#equipment .eq_swiper .swiper-slide:has(+ .swiper-slide + .swiper-slide + .swiper-slide-active),
+#equipment .eq_swiper .swiper-slide-next+.swiper-slide+.swiper-slide {
+    transform: translateY(20px);
+    z-index: 1;
+}
+
+/*의료진 소개*/
+#doctor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 👈 글자든 이미지든 알아서 정가운데 정렬 */
+    min-height: 800px;  /* 👈 섹션 전체 높이 (원하시는 만큼 조절) */
+}
+
+.doctor_box {
+    position: absolute;
+    bottom: 0px; 
+}
 
 
 
@@ -711,21 +830,21 @@ header .inner nav ul li a:hover {
         display: none;
     }
 
-    .mobile_program img{
+    .mobile_program img {
         display: block;
         margin: 0 auto;
     }
 
-    .img_border{
+    .img_border {
         border-radius: 22px;
         overflow: hidden;
     }
 
     #mobile_program .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     /*모바일 - 케어*/
     #care2 {

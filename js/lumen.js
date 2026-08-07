@@ -73,15 +73,28 @@ const mainSwiper = new Swiper(".care_swiper", {
 
 
 //모바일 케어
-var swiper = new Swiper('.care3_swiper', {
+const care3Swiper = new Swiper('.care3_swiper', {
     pagination: {
         el: '.mobile_care_pg',
     },
 });
 
 //모바일 프로그램
-var swiper = new Swiper('.mobile_program_swiper', {
+const mobileProgramSwiper = new Swiper('.mobile_program_swiper', {
     pagination: {
         el: '.mobile_program_pg',
+    },
+});
+
+//의료기기 스와이퍼
+var swiper = new Swiper('.eq_swiper', {
+    slidesPerView: 6.2,
+    spaceBetween: 25,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+    pagination: {
+        el: '.eq_pg',
+        clickable: true,
     },
 });
