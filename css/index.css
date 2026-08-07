@@ -216,8 +216,8 @@ header .inner nav ul li a:hover {
 }
 
 .slogan_font {
-    font-family: athena, sans-serif;
-    font-weight: 400;
+    font-family: "athena", sans-serif;
+    font-weight: 100;
     font-size: 64px;
     color: var(--point_purple);
     white-space: nowrap;
@@ -335,25 +335,26 @@ header .inner nav ul li a:hover {
 }
 
 /*케어 스와이퍼*/
-#care .title_box{
+#care .title_box {
     position: absolute;
     z-index: 99;
     top: 50%;
     left: 25%;
+
     transform: translate(-50%, -25%);
     color: #fff;
 }
 
-#care .title_box .sub_title{
+#care .title_box .sub_title {
     color: #fff;
 }
+
 #care {
     display: flex;
     width: 100%;
     height: 700px;
     overflow: hidden;
     background-color: #f5f5f5;
-
     position: relative;
 }
 
@@ -412,7 +413,7 @@ header .inner nav ul li a:hover {
 
 .care_text_box {
     width: 50%;
-    background-color: #3b4855;
+    background-color: var(--dark);
     /* 우측 텍스트 상자 배경색 */
     color: #fff;
     display: flex;
@@ -438,6 +439,79 @@ header .inner nav ul li a:hover {
 .care_text {
     font-size: 16px;
 }
+
+
+/*모바일케어*/
+#care2 {
+    padding: 100px 0;
+}
+
+
+.care2_box1 {
+    display: flex;
+
+    width: 100%;
+    height: 40%;
+}
+
+
+/* 모바일케어 - 이미지 영역 */
+.care2_img {
+    width: 45%;
+    overflow: hidden;
+}
+
+.care2_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 모바일케어 - 텍스트 영역 */
+.care2_text_box {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.care_num {
+    font-size: 64px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.care_title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.care_text {
+    font-size: 16px;
+    color: #fff;
+}
+
+#care2,
+#care3 {
+    display: none;
+}
+
+/*모바일 프로그램 안보이게 하기*/
+#mobile_program {
+    display: none;
+}
+
+
+
+
+
+
+
+
 
 /*태블릿*/
 @media (max-width:1024px) {
@@ -570,6 +644,16 @@ header .inner nav ul li a:hover {
     .about_img_box {
         width: 100%;
     }
+
+    /*태블릿 - 케어*/
+    #care2 {
+        display: block;
+    }
+
+    #care {
+        display: none;
+    }
+
 }
 
 
@@ -588,5 +672,85 @@ header .inner nav ul li a:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    /*모바일 - 프로그램 */
+    #mobile_program .swiper-slide p {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10px;
+    }
 
+    #mobile_program {
+        display: block;
+        margin-bottom: 100px;
+    }
+
+
+    .mobile_care_swiper_box {
+        position: relative;
+    }
+
+    .mobile_program_pg {
+        margin-bottom: 45px;
+    }
+
+    .mobile_care_text_box {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        text-align: center;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+
+    #program {
+        display: none;
+    }
+
+    .mobile_program img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .img_border{
+        border-radius: 22px;
+        overflow: hidden;
+    }
+
+    #mobile_program .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /*모바일 - 케어*/
+    #care2 {
+        display: none;
+    }
+
+    #care3 {
+        display: block;
+
+        margin-bottom: 100px;
+    }
+
+
+
+
+    /*모바일 패딩마진 조절하기*/
+    #slogan {
+        padding-bottom: 70px;
+    }
+
+    #about {
+        margin-bottom: 70px;
+    }
+
+    .title_box {
+        margin-bottom: 50px;
+    }
 }

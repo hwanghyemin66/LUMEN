@@ -69,3 +69,19 @@ const mainSwiper = new Swiper(".care_swiper", {
         swiper: thumbSwiper
     }
 });
+
+
+
+//모바일 케어
+var swiper = new Swiper('.care3_swiper', {
+    pagination: {
+        el: '.mobile_care_pg',
+    },
+});
+
+//모바일 프로그램
+var swiper = new Swiper('.mobile_program_swiper', {
+    pagination: {
+        el: '.mobile_program_pg',
+    },
+});
