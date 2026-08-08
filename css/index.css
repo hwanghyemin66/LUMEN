@@ -506,10 +506,11 @@ header .inner nav ul li a:hover {
 }
 
 /*의료기기 소개*/
-.background{
-      background: url(../img/equipment_background.jpg);
-      background-repeat: no-repeat;
+.background {
+    background: url(../img/equipment_background.jpg);
+    background-repeat: no-repeat;
 }
+
 #equipment {
     padding: 200px 0 130px 0;
 }
@@ -621,13 +622,106 @@ header .inner nav ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 👈 글자든 이미지든 알아서 정가운데 정렬 */
-    min-height: 800px;  /* 👈 섹션 전체 높이 (원하시는 만큼 조절) */
+    align-items: center;
+    /* 👈 글자든 이미지든 알아서 정가운데 정렬 */
+    min-height: 800px;
+    /* 👈 섹션 전체 높이 (원하시는 만큼 조절) */
 }
 
 .doctor_box {
     position: absolute;
-    bottom: 0px; 
+
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+
+}
+
+/* 의사 정보 전체 */
+.doctor_info {
+    position: absolute;
+    top: 390px;
+    z-index: 3;
+}
+
+
+/* 왼쪽 */
+.doctor_left {
+    left: 16%;
+}
+
+
+/* 오른쪽 */
+.doctor_right {
+    right: 16%;
+}
+
+
+/* 이름 원 */
+.doctor_name {
+    position: absolute;
+    top: -45px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #f5c9e8, #aaa0e8);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    z-index: 2;
+}
+
+.doctor_left .doctor_name {
+    right: -15px;
+}
+
+.doctor_right .doctor_name {
+    left: -15px;
+}
+
+
+.doctor_name span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.doctor_name strong {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* 경력 박스 */
+.doctor_career {
+    width: 270px;
+    min-height: 210px;
+
+    padding: 60px 25px 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+
+    text-align: center;
+}
+
+.doctor_career strong {
+    display: block;
+    color: #aaa0e8;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.doctor_career p {
+    margin: 7px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 
