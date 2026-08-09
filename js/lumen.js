@@ -98,3 +98,54 @@ var swiper = new Swiper('.eq_swiper', {
         clickable: true,
     },
 });
+
+
+//둘러보기 스와이퍼
+  var swiper = new Swiper('.place_swiper', {
+        pagination: {
+          el: '.place_pg',
+        },
+      });
+
+//예약팝업
+    const reservationBtn = document.querySelector(".reservation-btn");
+    const reservationModal = document.querySelector(".reservation-modal");
+    const reservationClose = document.querySelector(".reservation-modal__close");
+    const reservationForm = document.querySelector(".reservation-form");
+
+
+    // 예약 팝업 열기
+    reservationBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        reservationModal.classList.add("is-open");
+    });
+
+
+    // 예약 팝업 닫기
+    reservationClose.addEventListener("click", function () {
+        reservationModal.classList.remove("is-open");
+    });
+
+
+    // 팝업 바깥쪽 클릭하면 닫기
+    reservationModal.addEventListener("click", function (event) {
+
+        if (event.target === reservationModal) {
+            reservationModal.classList.remove("is-open");
+        }
+
+    });
+
+
+    // 예약하기
+    reservationForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        alert("예약 신청이 완료되었습니다.");
+
+        reservationModal.classList.remove("is-open");
+        reservationForm.reset();
+
+    });

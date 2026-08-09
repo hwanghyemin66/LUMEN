@@ -1,652 +1,871 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LUMEN</title>
-    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
 
     <!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://use.typekit.net/ddn6hgf.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ddn6hgf.css" />
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
 
     <!--css-->
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="inner">
-            <nav>
-                <a href="">
-                    <img src="./img/header-logo.svg" alt="">
-                </a>
-                <ul>
-                    <li><a href="#about">루멘소개</a> </li>
-                    <li><a href="#program">프로그램</a></li>
-                    <li><a href="#">피부관리</a></li>
-                    <li><a href="#">보유장비</a></li>
-                    <li><a href="#">의료진</a></li>
-                    <li><a href="#">시설안내</a></li>
-                    <li><a href="#">오시는길</a></li>
-                </ul>
+      <div class="inner">
+        <nav>
+          <a href="">
+            <img src="./img/header-logo.svg" alt="" />
+          </a>
+          <ul>
+            <li><a href="#about">루멘소개</a></li>
+            <li><a href="#program">프로그램</a></li>
+            <li><a href="#">피부관리</a></li>
+            <li><a href="#">보유장비</a></li>
+            <li><a href="#">의료진</a></li>
+            <li><a href="#">시설안내</a></li>
+            <li><a href="#">오시는길</a></li>
+          </ul>
 
+          <div class="header_btn">
+            <!--헤더예약버튼-->
+            <div class="header_reservation_btn">
+              <img src="./img/header_ reservation_btn.png" alt="" />
+            </div>
 
-                <div class="header_btn">
-                    <!--헤더예약버튼-->
-                    <div class="header_reservation_btn">
-                        <img src="./img/header_ reservation_btn.png" alt="">
-                    </div>
-
-                    <!--햄버거 버튼-->
-                    <div class="hamburger">
-                        <img src="./img/header_hamburger_btn.png" alt="">
-                    </div>
-                </div>
-            </nav>
-        </div>
+            <!--햄버거 버튼-->
+            <div class="hamburger">
+              <img src="./img/header_hamburger_btn.png" alt="" />
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
-
     <main>
-        <section id="mb">
-            <img src="./img/mb-logo.png" alt="">
-        </section>
+      <section id="mb">
+        <img src="./img/mb-logo.png" alt="" />
+      </section>
 
-        <section id="about" class="inner">
-            <div class="about_all_box">
-                <div class="about_text_box">
-                    <p class="sub_title">LUMEN DERMATOLOGY</p>
-                    <p class="title">피부 본연의 빛을</p>
-                    <div class="title_wrap">
-                        <p class="title">다시 밝혀주는</p>
-                        <p><img src="./img/title-lumen.png" alt=""></p>
-                    </div>
-
-                    <p style="padding-top: 30px;">피부는 자신감과 일상의 만족을 만드는 중요한 요소입니다. <br>
-                        LUMEN은 피부 본연의 건강과 아름다움을 가장 먼저 생각하며, <br><br>
-                        개인의 피부에 맞는 최적의 솔루션을 제안합니다. <br>
-
-                        과하지 않은 변화와 자연스러운 아름다움을 위해 정직한 진료와 섬세한 시술을 약속합니다. <br>
-                        당신의 피부가 가장 아름답게 빛나는 순간을 LUMEN이 함께하겠습니다.</p>
-
-                </div>
-                <div class="about_img_box">
-                    <img src="./img/about1.jpg" alt="" class="about_img1">
-                    <div class="about_video">
-                        <video src="./video/about_video.mp4" autoplay loop muted playsinline class="about_img2"></video>
-                        <img src="./video/about_video_img.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section><!--about-->
-
-        <section id="slogan">
-            <div class="slogan_motion_box">
-                <div class="slogan_motion">
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                </div>
-
-                <div class="slogan_motion">
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                    <p><img src="./img/where.svg" alt=""></p>
-                    <p><img src="./img/WhereBeautyBegins.png" alt=""></p>
-                </div>
-            </div>
-        </section><!--slogan-->
-
-        <section id="program" class="inner">
-            <div class="title_box">
-                <p class="sub_title">PROGRAMS</p>
-                <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
-                <p class="title_text">개인의 피부 상태와 고민을 세심하게 분석하여, 가장 적합한 치료 방향을 제안합니다.</p>
+      <section id="about" class="inner">
+        <div class="about_all_box">
+          <div class="about_text_box">
+            <p class="sub_title">LUMEN DERMATOLOGY</p>
+            <p class="title">피부 본연의 빛을</p>
+            <div class="title_wrap">
+              <p class="title">다시 밝혀주는</p>
+              <p><img src="./img/title-lumen.png" alt="" /></p>
             </div>
 
-            <div class="program_img_box">
-                <div>
-                    <img src="./img/program1.jpg" alt="">
-                    <div class="hover_background">
-                        <p>피부 진단 & 맞춤케어</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="./img/program2.jpg" alt="">
-                    <div class="hover_background">
-                        <p> 트러블 & 피부개선</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="./img/program3.jpg" alt="">
-                    <div class="hover_background">
-                        <p>안티에이징 & 리프팅</p>
-                    </div>
-                </div>
-                <div>
-                    <img src="./img/program4.jpg" alt="">
-                    <div class="hover_background">
-                        <p>프리미엄 시술</p>
-                    </div>
-                </div>
-            </div><!--프로그램 이미지 박스-->
-        </section><!--program-->
+            <p style="padding-top: 30px">
+              피부는 자신감과 일상의 만족을 만드는 중요한 요소입니다. <br />
+              LUMEN은 피부 본연의 건강과 아름다움을 가장 먼저 생각하며,
+              <br /><br />
+              개인의 피부에 맞는 최적의 솔루션을 제안합니다. <br />
 
-        <section id="mobile_program">
-            <div class="title_box">
-                <p class="sub_title">PROGRAMS</p>
-                <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
-                <p class="title_text">개인의 피부 상태와 고민을 세심하게 분석하여, 가장 적합한 치료 방향을 제안합니다.</p>
+              과하지 않은 변화와 자연스러운 아름다움을 위해 정직한 진료와 섬세한
+              시술을 약속합니다. <br />
+              당신의 피부가 가장 아름답게 빛나는 순간을 LUMEN이 함께하겠습니다.
+            </p>
+          </div>
+          <div class="about_img_box">
+            <img src="./img/about1.jpg" alt="" class="about_img1" />
+            <div class="about_video">
+              <video
+                src="./video/about_video.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="about_img2"
+              ></video>
+              <img src="./video/about_video_img.jpg" alt="" />
             </div>
-            <!-- Swiper -->
-            <div class="swiper mySwiper mobile_program_swiper">
-                <div class="swiper-wrapper mobile_program_swiper_wrapper">
-                    <div class="swiper-slide">
-                        <div class="img_border">
-                            <img src="./img/program1.jpg" alt="">
-                        </div>
-                        <p>피부진단 & 맞춤케어</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_border">
-                            <img src="./img/program2.jpg" alt="">
-                        </div>
-                        <p>트러블 & 피부개선</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_border">
-                            <img src="./img/program3.jpg" alt="">
-                        </div>
-                        <p>안티에이징 & 리프팅</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div>
-                            <img src="./img/program4.jpg" alt="">
-                        </div>
-                        <p>프리미엄 시술</p>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <!--about-->
 
+      <section id="slogan">
+        <div class="slogan_motion_box">
+          <div class="slogan_motion">
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+          </div>
 
-                </div>
-                <div class="swiper-pagination mobile_program_pg"></div>
-            </div>
-        </section>
+          <div class="slogan_motion">
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+            <p><img src="./img/where.svg" alt="" /></p>
+            <p><img src="./img/WhereBeautyBegins.png" alt="" /></p>
+          </div>
+        </div>
+      </section>
+      <!--slogan-->
 
-        <section id="care">
-            <!-- 왼쪽 메인 스와이퍼 (50%) -->
-            <div class="title_box">
-                <p class="sub_title">LUMEN CARE PROCESS</p>
-                <p class="title">피부를 위한 체계적인 케어 시스템</p>
-                <p class="title_text">상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.</p>
-            </div>
-
-            <div class="swiper care_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./img/care-big1.jpg" alt="케어 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/care-big2.jpg" alt="케어 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/care-big3.jpg" alt="케어 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/care-big4.jpg" alt="케어 4">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 오른쪽 썸네일 스와이퍼 (50%) -->
-            <div class="swiper careThumb">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="thumb_box">
-                            <img src="./img/care1-mini.jpg" alt="">
-                            <div class="care_text_box">
-                                <span class="care_num">01</span>
-                                <h4 class="care_title">정밀 피부 분석</h4>
-                                <p class="care_text">피부 상태를 정확하게 진단합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="thumb_box">
-                            <img src="./img/care2-mini.jpg" alt="">
-                            <div class="care_text_box">
-                                <span class="care_num">02</span>
-                                <h4 class="care_title">맞춤 케어 솔루션</h4>
-                                <p class="care_text">개인별 피부 고민에 맞는 솔루션을 제안합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="thumb_box">
-                            <img src="./img/care3-mini.jpg" alt="">
-                            <div class="care_text_box">
-                                <span class="care_num">03</span>
-                                <h4 class="care_title">맞춤 시술 설계</h4>
-                                <p class="care_text">피부 타입과 목적에 맞는 치료를 진행합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="thumb_box">
-                            <img src="./img/care4-mini.jpg" alt="">
-                            <div class="care_text_box">
-                                <span class="care_num">04</span>
-                                <h4 class="care_title">체계적인 사후 관리</h4>
-                                <p class="care_text">시술 후까지 함께 관리합니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--care-->
-
-        <section id="care2">
-            <div class="title_box">
-                <p class="sub_title">LUMEN CARE PROCESS</p>
-                <p class="title">피부를 위한 체계적인 케어 시스템</p>
-                <p class="title_text">상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.</p>
-            </div><!--타이틀박스-->
-
-            <div class="care2_box1">
-                <div class="care2_img">
-                    <img src="./img/tab_care1.jpg" alt="">
-                </div><!--이미지박스-->
-                <div class="care2_text_box" style="background-color: #4B5A6B;">
-                    <span class="care_num">01</span>
-                    <h4 class="care_title">정밀 피부 분석</h4>
-                    <p class="care_text">
-                        피부 상태를 정확하게 진단합니다.
-                    </p>
-                </div><!--텍스트박스-->
-            </div>
-
-            <div class="care2_box1">
-                <div class="care2_text_box" style="background-color: #526477;">
-                    <span class="care_num">02</span>
-                    <h4 class="care_title">맞춤 케어 솔루션</h4>
-                    <p class="care_text">
-                        개인별 피부 고민에 맞는 솔루션을 제안합니다.
-                    </p>
-                </div><!--텍스트박스-->
-                <div class="care2_img">
-                    <img src="./img/tab_care2.jpg" alt="">
-                </div><!--이미지박스-->
-            </div>
-
-            <div class="care2_box1">
-                <div class="care2_img">
-                    <img src="./img/tab_care3.jpg" alt="">
-                </div><!--이미지박스-->
-                <div class="care2_text_box" style="background-color: #758FAC;">
-                    <span class="care_num">03</span>
-                    <h4 class="care_title">맞춤 시술 설계</h4>
-                    <p class="care_text">
-                        피부 타입과 목적에 맞는 치료를 진행합니다.
-                    </p>
-                </div><!--텍스트박스-->
-            </div>
-
-            <div class="care2_box1">
-                <div class="care2_text_box" style="background-color: #839EC5;">
-                    <span class="care_num">04</span>
-                    <h4 class="care_title">체계적인 사후 관리</h4>
-                    <p class="care_text">
-                        피부 상태를 정확하게 진단합니다.
-                    </p>
-                </div><!--텍스트박스-->
-                <div class="care2_img">
-                    <img src="./img/tab_care4.jpg" alt="">
-                </div><!--이미지박스-->
-            </div>
-
-        </section><!--태블릿 - 케어-->
-
-        <section id="care3">
-            <div class="title_box">
-                <p class="sub_title">LUMEN CARE PROCESS</p>
-                <p class="title">피부를 위한 체계적인 케어 시스템</p>
-                <p class="title_text">상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.</p>
-            </div><!--타이틀박스-->
-
-            <!-- Swiper -->
-            <div class="swiper mySwiper care3_swiper">
-                <div class="swiper-wrapper care3_swiper_wrapper">
-                    <div class="swiper-slide care3_swiper_slide">
-                        <div class="mobile_care_swiper_box">
-                            <img src="./img/mobile-care1.jpg" alt="">
-                            <div class="mobile_care_text_box">
-                                <span class="care_num">01</span>
-                                <h4 class="care_title">정밀 피부 분석</h4>
-                                <p class="care_text">
-                                    피부 상태를 정확하게 진단합니다.
-                                </p>
-                            </div><!--mobile_care_text_box-->
-                        </div>
-                    </div>
-                    <div class="swiper-slide care3_swiper_slide">
-                        <div>
-                            <img src="./img/mobile-care2.jpg" alt="">
-                            <div class="mobile_care_text_box">
-                                <span class="care_num">02</span>
-                                <h4 class="care_title">1:1 맞춤 상담</h4>
-                                <p class="care_text">
-                                    개인별 피부 고민에 맞는 솔루션 제안
-                                </p>
-                            </div><!--mobile_care_text_box-->
-                        </div>
-                    </div>
-                    <div class="swiper-slide care3_swiper_slide">
-                        <div>
-                            <img src="./img/mobile-care3.jpg" alt="">
-                            <div class="mobile_care_text_box">
-                                <span class="care_num">03</span>
-                                <h4 class="care_title">맞춤 시술 설계</h4>
-                                <p class="care_text">
-                                    피부 타입과 목적에 맞는 치료 진행
-                                </p>
-                            </div><!--mobile_care_text_box-->
-                        </div>
-                    </div>
-                    <div class="swiper-slide care3_swiper_slide">
-                        <div>
-                            <img src="./img/mobile-care4.jpg" alt="">
-                            <div class="mobile_care_text_box">
-                                <span class="care_num">04</span>
-                                <h4 class="care_title">체계적인 사후 관리</h4>
-                                <p class="care_text">
-                                    시술 후까지 함께 관리합니다.
-                                </p>
-                            </div><!--mobile_care_text_box-->
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination mobile_care_pg"></div>
-            </div>
-
-        </section><!--모바일 - 케어-->
-
-        <div class="background">
-            <section id="equipment">
-                <div class="title_box">
-                    <p class="sub_title" style="color:#fff;">EQUIPMENT</p>
-                    <p class="title">첨단 의료장비로 완성하는 정밀한 진료</p>
-                    <p class="title_text">피부 상태에 맞는 안전하고 효과적인 맞춤 시술을 제공합니다.</p>
-                </div><!--title_box-->
-
-                <!-- Swiper -->
-                <div class="swiper mySwiper eq_swiper">
-                    <div class="swiper-wrapper eq_swiper_wrapper">
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT1.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">인라이튼 <br>피코레이저</p>
-                                    <ul class="eq_tags">
-                                        <li>색소</li>
-                                        <li>여드름흉터</li>
-                                        <li>문신제거</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기1-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT2.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">CO2 레이저</p>
-                                    <ul class="eq_tags">
-                                        <li>색소</li>
-                                        <li>점</li>
-                                        <li>흉터</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기2-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT3.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">피부 스캐너</p>
-                                    <ul class="eq_tags">
-                                        <li>피부 확대</li>
-                                        <li>PC 확인</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기3-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT4.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">매트릭셀 프로</p>
-                                    <ul class="eq_tags">
-                                        <li>색소</li>
-                                        <li>여드름</li>
-                                        <li>모공흉터</li>
-                                        <li>점</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기4-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT5.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">이브뮤즈</p>
-                                    <ul class="eq_tags">
-                                        <li>5HD</li>
-                                        <li>3D</li>
-                                        <li>정밀분석</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기5-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT6.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">광에너지 치료기</p>
-                                    <ul class="eq_tags">
-                                        <li>재생</li>
-                                        <li>상처</li>
-                                        <li>여드름</li>
-                                        <li>대상포진</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기6-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT7.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">울쎄라피 프라임</p>
-                                    <ul class="eq_tags">
-                                        <li>주름</li>
-                                        <li>탄력</li>
-                                        <li>리프팅</li>
-                                        <li>콜라겐생성</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기7-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT8.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">아그네스</p>
-                                    <ul class="eq_tags">
-                                        <li>여드름</li>
-                                        <li>주름</li>
-                                        <li>한관종</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기8-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT9.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">포텐자</p>
-                                    <ul class="eq_tags">
-                                        <li>모공</li>
-                                        <li>흉터</li>
-                                        <li>피부재생</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기9-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT10.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">더모스코피</p>
-                                    <ul class="eq_tags">
-                                        <li>피부확대</li>
-                                        <li>피부암진단</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기10-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT11.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">마크뷰</p>
-                                    <ul class="eq_tags">
-                                        <li>4가지 LED</li>
-                                        <li>다양한질환</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기11-->
-
-                        <div class="swiper-slide eq_swiper_slide">
-                            <img src="./img/EQUIPMENT12.jpg" alt="">
-                            <div class="eq_hover_box">
-                                <div class="eq_info">
-                                    <p class="eq_title">써마지 FLX</p>
-                                    <ul class="eq_tags">
-                                        <li>탄력</li>
-                                        <li>주름</li>
-                                        <li>리프팅</li>
-                                        <li>타이트닝</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div><!--의료기기12-->
-
-                    </div>
-                </div>
-            </section><!--의료기기-->
-
-            <section id="doctor">
-                <div class="title_box">
-                    <p class="sub_title">LUMEN DOCTOR’S</p>
-                    <p class="title">아름다움을 설계하는 전문성</p>
-                    <p class="title_text">정확한 분석과 풍부한 경험으로 건강한 아름다움을 완성합니다..</p>
-                </div><!--title_box-->
-
-                <!-- 왼쪽 의사 정보 -->
-                <div class="doctor_info doctor_left">
-                    <div class="doctor_name">
-                        <span>대표원장</span>
-                        <strong>한재준</strong>
-                    </div>
-
-                    <div class="doctor_career">
-                        <strong>피부과 전문의</strong>
-                        <p>○○대학교 의과대학 졸업</p>
-                        <p>○○대학교 피부과 전문의 수료</p>
-                        <p>대한피부과학회 정회원</p>
-                        <p>레이저·안티에이징 시술 다수 임상 경험</p>
-                    </div>
-                </div>
-
-                <div class="doctor_box">
-                    <div>
-
-                    </div>
-                    <img src="./img/doctor-01.png" alt="">
-                </div>
-            </section><!--의료진 소개-->
-
-            <!-- 오른쪽 의사 정보 -->
-            <div class="doctor_info doctor_right">
-                <div class="doctor_name">
-                    <span>원장</span>
-                    <strong>이서연</strong>
-                </div>
-
-                <div class="doctor_career">
-                    <strong>피부과 전문의</strong>
-                    <p>○○대학교 의과대학 졸업</p>
-                    <p>○○대학교 피부과 전문의 수료</p>
-                    <p>대한피부과학회 정회원</p>
-                    <p>색소·트러블·피부 재생 치료 전문 진료</p>
-                </div>
-            </div>
-
-
-
+      <section id="program" class="inner">
+        <div class="title_box">
+          <p class="sub_title">PROGRAMS</p>
+          <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
+          <p class="title_text">
+            개인의 피부 상태와 고민을 세심하게 분석하여, 가장 적합한 치료 방향을
+            제안합니다.
+          </p>
         </div>
 
+        <div class="program_img_box">
+          <div>
+            <img src="./img/program1.jpg" alt="" />
+            <div class="hover_background">
+              <p>피부 진단 & 맞춤케어</p>
+            </div>
+          </div>
+          <div>
+            <img src="./img/program2.jpg" alt="" />
+            <div class="hover_background">
+              <p>트러블 & 피부개선</p>
+            </div>
+          </div>
+          <div>
+            <img src="./img/program3.jpg" alt="" />
+            <div class="hover_background">
+              <p>안티에이징 & 리프팅</p>
+            </div>
+          </div>
+          <div>
+            <img src="./img/program4.jpg" alt="" />
+            <div class="hover_background">
+              <p>프리미엄 시술</p>
+            </div>
+          </div>
+        </div>
+        <!--프로그램 이미지 박스-->
+      </section>
+      <!--program-->
 
+      <section id="mobile_program">
+        <div class="title_box">
+          <p class="sub_title">PROGRAMS</p>
+          <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
+          <p class="title_text">
+            개인의 피부 상태와 고민을 세심하게 분석하여, 가장 적합한 치료 방향을
+            제안합니다.
+          </p>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper mobile_program_swiper">
+          <div class="swiper-wrapper mobile_program_swiper_wrapper">
+            <div class="swiper-slide">
+              <div class="img_border">
+                <img src="./img/program1.jpg" alt="" />
+              </div>
+              <p>피부진단 & 맞춤케어</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_border">
+                <img src="./img/program2.jpg" alt="" />
+              </div>
+              <p>트러블 & 피부개선</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_border">
+                <img src="./img/program3.jpg" alt="" />
+              </div>
+              <p>안티에이징 & 리프팅</p>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img src="./img/program4.jpg" alt="" />
+              </div>
+              <p>프리미엄 시술</p>
+            </div>
+          </div>
+          <div class="swiper-pagination mobile_program_pg"></div>
+        </div>
+      </section>
 
-
-
-
-
-
-
-
-
-
-
-        <div class="btn">
-            <a href="#"><img src="./img/fix-btn1.png" alt="" class="btn1"></a>
-            <a href="#mb"><img src="./img/fix-btn2.png" alt="" class="btn2"></a>
+      <section id="care">
+        <!-- 왼쪽 메인 스와이퍼 (50%) -->
+        <div class="title_box">
+          <p class="sub_title">LUMEN CARE PROCESS</p>
+          <p class="title">피부를 위한 체계적인 케어 시스템</p>
+          <p class="title_text">
+            상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.
+          </p>
         </div>
 
+        <div class="swiper care_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/care-big1.jpg" alt="케어 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/care-big2.jpg" alt="케어 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/care-big3.jpg" alt="케어 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/care-big4.jpg" alt="케어 4" />
+            </div>
+          </div>
+        </div>
 
+        <!-- 오른쪽 썸네일 스와이퍼 (50%) -->
+        <div class="swiper careThumb">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="thumb_box">
+                <img src="./img/care1-mini.jpg" alt="" />
+                <div class="care_text_box">
+                  <span class="care_num">01</span>
+                  <h4 class="care_title">정밀 피부 분석</h4>
+                  <p class="care_text">피부 상태를 정확하게 진단합니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="thumb_box">
+                <img src="./img/care2-mini.jpg" alt="" />
+                <div class="care_text_box">
+                  <span class="care_num">02</span>
+                  <h4 class="care_title">맞춤 케어 솔루션</h4>
+                  <p class="care_text">
+                    개인별 피부 고민에 맞는 솔루션을 제안합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="thumb_box">
+                <img src="./img/care3-mini.jpg" alt="" />
+                <div class="care_text_box">
+                  <span class="care_num">03</span>
+                  <h4 class="care_title">맞춤 시술 설계</h4>
+                  <p class="care_text">
+                    피부 타입과 목적에 맞는 치료를 진행합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="thumb_box">
+                <img src="./img/care4-mini.jpg" alt="" />
+                <div class="care_text_box">
+                  <span class="care_num">04</span>
+                  <h4 class="care_title">체계적인 사후 관리</h4>
+                  <p class="care_text">시술 후까지 함께 관리합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--care-->
 
+      <section id="care2">
+        <div class="title_box">
+          <p class="sub_title">LUMEN CARE PROCESS</p>
+          <p class="title">피부를 위한 체계적인 케어 시스템</p>
+          <p class="title_text">
+            상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.
+          </p>
+        </div>
+        <!--타이틀박스-->
+
+        <div class="care2_box1">
+          <div class="care2_img">
+            <img src="./img/tab_care1.jpg" alt="" />
+          </div>
+          <!--이미지박스-->
+          <div class="care2_text_box" style="background-color: #4b5a6b">
+            <span class="care_num">01</span>
+            <h4 class="care_title">정밀 피부 분석</h4>
+            <p class="care_text">피부 상태를 정확하게 진단합니다.</p>
+          </div>
+          <!--텍스트박스-->
+        </div>
+
+        <div class="care2_box1">
+          <div class="care2_text_box" style="background-color: #526477">
+            <span class="care_num">02</span>
+            <h4 class="care_title">맞춤 케어 솔루션</h4>
+            <p class="care_text">
+              개인별 피부 고민에 맞는 솔루션을 제안합니다.
+            </p>
+          </div>
+          <!--텍스트박스-->
+          <div class="care2_img">
+            <img src="./img/tab_care2.jpg" alt="" />
+          </div>
+          <!--이미지박스-->
+        </div>
+
+        <div class="care2_box1">
+          <div class="care2_img">
+            <img src="./img/tab_care3.jpg" alt="" />
+          </div>
+          <!--이미지박스-->
+          <div class="care2_text_box" style="background-color: #758fac">
+            <span class="care_num">03</span>
+            <h4 class="care_title">맞춤 시술 설계</h4>
+            <p class="care_text">피부 타입과 목적에 맞는 치료를 진행합니다.</p>
+          </div>
+          <!--텍스트박스-->
+        </div>
+
+        <div class="care2_box1">
+          <div class="care2_text_box" style="background-color: #839ec5">
+            <span class="care_num">04</span>
+            <h4 class="care_title">체계적인 사후 관리</h4>
+            <p class="care_text">피부 상태를 정확하게 진단합니다.</p>
+          </div>
+          <!--텍스트박스-->
+          <div class="care2_img">
+            <img src="./img/tab_care4.jpg" alt="" />
+          </div>
+          <!--이미지박스-->
+        </div>
+      </section>
+      <!--태블릿 - 케어-->
+
+      <section id="care3">
+        <div class="title_box">
+          <p class="sub_title">LUMEN CARE PROCESS</p>
+          <p class="title">피부를 위한 체계적인 케어 시스템</p>
+          <p class="title_text">
+            상담부터 시술, 사후관리까지 모든 과정을 꼼꼼하게 진행합니다.
+          </p>
+        </div>
+        <!--타이틀박스-->
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper care3_swiper">
+          <div class="swiper-wrapper care3_swiper_wrapper">
+            <div class="swiper-slide care3_swiper_slide">
+              <div class="mobile_care_swiper_box">
+                <img src="./img/mobile-care1.jpg" alt="" />
+                <div class="mobile_care_text_box">
+                  <span class="care_num">01</span>
+                  <h4 class="care_title">정밀 피부 분석</h4>
+                  <p class="care_text">피부 상태를 정확하게 진단합니다.</p>
+                </div>
+                <!--mobile_care_text_box-->
+              </div>
+            </div>
+            <div class="swiper-slide care3_swiper_slide">
+              <div>
+                <img src="./img/mobile-care2.jpg" alt="" />
+                <div class="mobile_care_text_box">
+                  <span class="care_num">02</span>
+                  <h4 class="care_title">1:1 맞춤 상담</h4>
+                  <p class="care_text">개인별 피부 고민에 맞는 솔루션 제안</p>
+                </div>
+                <!--mobile_care_text_box-->
+              </div>
+            </div>
+            <div class="swiper-slide care3_swiper_slide">
+              <div>
+                <img src="./img/mobile-care3.jpg" alt="" />
+                <div class="mobile_care_text_box">
+                  <span class="care_num">03</span>
+                  <h4 class="care_title">맞춤 시술 설계</h4>
+                  <p class="care_text">피부 타입과 목적에 맞는 치료 진행</p>
+                </div>
+                <!--mobile_care_text_box-->
+              </div>
+            </div>
+            <div class="swiper-slide care3_swiper_slide">
+              <div>
+                <img src="./img/mobile-care4.jpg" alt="" />
+                <div class="mobile_care_text_box">
+                  <span class="care_num">04</span>
+                  <h4 class="care_title">체계적인 사후 관리</h4>
+                  <p class="care_text">시술 후까지 함께 관리합니다.</p>
+                </div>
+                <!--mobile_care_text_box-->
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mobile_care_pg"></div>
+        </div>
+      </section>
+      <!--모바일 - 케어-->
+
+      <div class="background">
+        <section id="equipment">
+          <div class="title_box">
+            <p class="sub_title" style="color: #fff">EQUIPMENT</p>
+            <p class="title">첨단 의료장비로 완성하는 정밀한 진료</p>
+            <p class="title_text">
+              피부 상태에 맞는 안전하고 효과적인 맞춤 시술을 제공합니다.
+            </p>
+          </div>
+          <!--title_box-->
+
+          <!-- Swiper -->
+          <div class="swiper mySwiper eq_swiper">
+            <div class="swiper-wrapper eq_swiper_wrapper">
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT1.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">인라이튼 <br />피코레이저</p>
+                    <ul class="eq_tags">
+                      <li>색소</li>
+                      <li>여드름흉터</li>
+                      <li>문신제거</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기1-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT2.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">CO2 레이저</p>
+                    <ul class="eq_tags">
+                      <li>색소</li>
+                      <li>점</li>
+                      <li>흉터</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기2-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT3.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">피부 스캐너</p>
+                    <ul class="eq_tags">
+                      <li>피부 확대</li>
+                      <li>PC 확인</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기3-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT4.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">매트릭셀 프로</p>
+                    <ul class="eq_tags">
+                      <li>색소</li>
+                      <li>여드름</li>
+                      <li>모공흉터</li>
+                      <li>점</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기4-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT5.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">이브뮤즈</p>
+                    <ul class="eq_tags">
+                      <li>5HD</li>
+                      <li>3D</li>
+                      <li>정밀분석</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기5-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT6.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">광에너지 치료기</p>
+                    <ul class="eq_tags">
+                      <li>재생</li>
+                      <li>상처</li>
+                      <li>여드름</li>
+                      <li>대상포진</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기6-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT7.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">울쎄라피 프라임</p>
+                    <ul class="eq_tags">
+                      <li>주름</li>
+                      <li>탄력</li>
+                      <li>리프팅</li>
+                      <li>콜라겐생성</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기7-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT8.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">아그네스</p>
+                    <ul class="eq_tags">
+                      <li>여드름</li>
+                      <li>주름</li>
+                      <li>한관종</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기8-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT9.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">포텐자</p>
+                    <ul class="eq_tags">
+                      <li>모공</li>
+                      <li>흉터</li>
+                      <li>피부재생</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기9-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT10.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">더모스코피</p>
+                    <ul class="eq_tags">
+                      <li>피부확대</li>
+                      <li>피부암진단</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기10-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT11.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">마크뷰</p>
+                    <ul class="eq_tags">
+                      <li>4가지 LED</li>
+                      <li>다양한질환</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기11-->
+
+              <div class="swiper-slide eq_swiper_slide">
+                <img src="./img/EQUIPMENT12.jpg" alt="" />
+                <div class="eq_hover_box">
+                  <div class="eq_info">
+                    <p class="eq_title">써마지 FLX</p>
+                    <ul class="eq_tags">
+                      <li>탄력</li>
+                      <li>주름</li>
+                      <li>리프팅</li>
+                      <li>타이트닝</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--의료기기12-->
+            </div>
+          </div>
+        </section>
+        <!--의료기기-->
+
+        <section id="doctor">
+          <div class="title_box">
+            <p class="sub_title">LUMEN DOCTOR’S</p>
+            <p class="title">아름다움을 설계하는 전문성</p>
+            <p class="title_text">
+              정확한 분석과 풍부한 경험으로 건강한 아름다움을 완성합니다.
+            </p>
+          </div>
+          <!--title_box-->
+
+          <div class="doctor_info doctor_left">
+            <div class="doctor_name">
+              <span>대표원장</span>
+              <strong>한재준</strong>
+            </div>
+
+            <div class="doctor_career">
+              <strong>피부과 전문의</strong>
+              <p>○○대학교 의과대학 졸업</p>
+              <p>○○대학교 피부과 전문의 수료</p>
+              <p>대한피부과학회 정회원</p>
+              <p>레이저·안티에이징 시술 다수 임상 경험</p>
+            </div>
+          </div>
+          <!-- 왼쪽 의사 정보 -->
+
+          <div class="doctor_box">
+            <img src="./img/doctor-01.png" alt="" />
+          </div>
+          <!--의사 이미지-->
+
+          <div class="doctor_info doctor_right">
+            <div class="doctor_name">
+              <span>원장</span>
+              <strong>이서연</strong>
+            </div>
+
+            <div class="doctor_career">
+              <strong>피부과 전문의</strong>
+              <p>○○대학교 의과대학 졸업</p>
+              <p>○○대학교 피부과 전문의 수료</p>
+              <p>대한피부과학회 정회원</p>
+              <p>색소·트러블·피부 재생 치료 전문 진료</p>
+            </div>
+          </div>
+          <!-- 오른쪽 의사 정보 -->
+        </section>
+        <!--의료진 소개-->
+      </div>
+      <!--백그라운드-->
+
+      <section id="place">
+        <div class="title_box">
+          <p class="sub_title">LUMEN PLACE</p>
+          <p class="title">
+            <img src="./img/title-lumen.png" alt="" />
+            피부과 둘러보기
+          </p>
+          <p class="title_text">당신의 아름다움을 밝히는 공간</p>
+        </div>
+        <!--title_box-->
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper place_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/place1.jpg" alt="place1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/place1.jpg" alt="place1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/place1.jpg" alt="place1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/place1.jpg" alt="place1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/place1.jpg" alt="place1" />
+            </div>
+          </div>
+          <div class="swiper-pagination place_pg"></div>
+        </div>
+      </section>
+      <!--둘러보기-->
+
+      <section id="location">
+        <div class="inner">
+          <div class="map_box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x3568eb6f07cf13e1%3A0x3ab752904a664c94!2sSeomyeon!5e0!3m2!1sen!2skr!4v1786278347515!5m2!1sen!2skr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe
+            ><!--지도-->
+          </div>
+
+          <div class="location_text_box">
+            <div class="location_title">
+              <p class="sub_title">LOCATION</p>
+              <p class="title">오시는길</p>
+              <p>부산 부산진구 서면로 12번길 34-5 1층</p>
+            </div>
+            <div class="map">
+              <a href="https://naver.me/xY9nh72M" target="_blank"
+                ><img src="./img/location_naver.png" alt="네이버지도"
+              /></a>
+              <a href="https://kko.to/9RkKFEo7Ca" target="_blank"
+                ><img src="./img/location_kakao.png" alt="카카오지도"
+              /></a>
+            </div>
+
+            <ul class="call">
+              <li class="call_title">대표전화</li>
+              <li class="call_num">051.1234.5678</li>
+            </ul>
+
+            <div class="time">
+              <p class="time_title">진료시간</p>
+              <ul>
+                <li>
+                  <p class="time_day">평일</p>
+                  <p>09:30 ~ 18:30</p>
+                </li>
+                <li>
+                  <p class="time_day">토요일</p>
+                  <p>09:30 ~ 16:30</p>
+                </li>
+                <li>
+                  <p class="time_day">점심</p>
+                  <p>13:00 ~ 14:00</p>
+                </li>
+                <li class="time_info">
+                  *일요일 · 공휴일은 휴진입니다. <br />
+                  *토요일은 점심시간 없이 진료합니다.
+                </li>
+              </ul>
+            </div>
+            <!--진료시간-->
+          </div>
+          <!--텍스트 박스-->
+        </div>
+        <!--inner-->
+      </section>
+      <!--오시는길-->
     </main>
-</body>
 
+    <footer>
+      <div class="footer_img">
+        <img src="./img/footer_logo.png" alt="로고" />
+      </div>
+      <div class="footer_text">
+        <p>개인정보처리방침 이용약관 비급여수가</p>
+        <p>LUMEN 피부과의원 l 부산광역시 부산진구 서면로 12번길 34-5 1층</p>
+        <p>대표자 : 홍길동 l 사업자번호 : 123-45-67890 l Tel. 051.1234.5678</p>
+        <p>ⓒ 루멘피부과의원.All rights reserved.</p>
+      </div>
+    </footer>
 
+    <div class="btn">
+      <a href="#"
+        ><img
+          src="./img/fix-btn1.png"
+          alt="예약하기"
+          class="btn1 reservation-btn"
+      /></a>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+      <!-- 예약 팝업 -->
+      <div class="reservation-modal">
+        <div class="reservation-modal__box">
+          <button type="button" class="reservation-modal__close">×</button>
 
+          <h2 class="reservation-modal__title">진료예약</h2>
 
-<script src="./js/lumen.js"></script>
+          <form class="reservation-form">
+            <!-- 이름 -->
+            <div class="reservation-form__item">
+              <label for="reservation-name">이름</label>
+              <input
+                type="text"
+                id="reservation-name"
+                name="name"
+                placeholder="이름을 입력해주세요."
+              />
+            </div>
 
+            <!-- 연락처 -->
+            <div class="reservation-form__item">
+              <label for="reservation-phone">연락처</label>
+              <input
+                type="tel"
+                id="reservation-phone"
+                name="phone"
+                placeholder="연락처를 입력해주세요."
+              />
+            </div>
+
+            <!-- 희망 날짜 -->
+            <div class="reservation-form__item">
+              <label for="reservation-date">희망날짜</label>
+              <input type="date" id="reservation-date" name="date" />
+            </div>
+
+            <!-- 희망 시간 -->
+            <div class="reservation-form__item">
+              <label for="reservation-time">희망시간</label>
+
+              <select id="reservation-time" name="time">
+                <option value="">시간을 선택해주세요.</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+              </select>
+            </div>
+
+            <!-- 개인정보 동의 -->
+            <label class="reservation-form__agree">
+              <input type="checkbox" name="privacy" />
+              <span>개인정보 수집 및 이용에 동의합니다. (필수)</span>
+            </label>
+
+            <button type="submit" class="reservation-form__submit">
+              예약하기
+            </button>
+          </form>
+        </div>
+      </div>
+      <!--예약팝업-->
+
+      <a href="#mb"
+        ><img src="./img/fix-btn2.png" alt="위로가기" class="btn2"
+      /></a>
+    </div>
+  </body>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+  <script src="./js/lumen.js"></script>
 </html>

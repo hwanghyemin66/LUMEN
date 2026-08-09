@@ -159,6 +159,11 @@ header .inner nav ul li a:hover {
     margin-left: 15px;
 }
 
+.title_wrap img{
+    width: clamp(100px, 11.25vw, 180px) !important;
+    height: auto;
+}
+
 .about_img_box {
     display: flex;
     gap: 30px;
@@ -507,8 +512,9 @@ header .inner nav ul li a:hover {
 
 /*의료기기 소개*/
 .background {
-    background: url(../img/equipment_background.jpg);
+     background: url(../img/equipment_background.jpg);
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #equipment {
@@ -623,14 +629,11 @@ header .inner nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 👈 글자든 이미지든 알아서 정가운데 정렬 */
     min-height: 800px;
-    /* 👈 섹션 전체 높이 (원하시는 만큼 조절) */
 }
 
 .doctor_box {
     position: absolute;
-
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
@@ -638,23 +641,29 @@ header .inner nav ul li a:hover {
 
 }
 
+.doctor_box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* 의사 정보 전체 */
 .doctor_info {
     position: absolute;
-    top: 390px;
+    top: 500px;
     z-index: 3;
 }
 
 
 /* 왼쪽 */
 .doctor_left {
-    left: 16%;
+    left: 15%;
 }
 
 
 /* 오른쪽 */
 .doctor_right {
-    right: 16%;
+    right: 15%;
 }
 
 
@@ -666,7 +675,7 @@ header .inner nav ul li a:hover {
     height: 95px;
     border-radius: 50%;
 
-    background: linear-gradient(135deg, #f5c9e8, #aaa0e8);
+    background: linear-gradient(135deg, #F4CDEA, #BEB7ED);
 
     display: flex;
     flex-direction: column;
@@ -699,15 +708,20 @@ header .inner nav ul li a:hover {
 
 /* 경력 박스 */
 .doctor_career {
-    width: 270px;
-    min-height: 210px;
+    width: 253px;
+    height: 150px;
 
-    padding: 60px 25px 25px;
+    padding: 70px 30px 30px;
 
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 30px;
+    background: #fff;
+    border-radius: 45px; 
+}
+.doctor_left .doctor_career{
+   text-align: right;
+}
 
-    text-align: center;
+.doctor_right .doctor_career{
+    text-align: left;
 }
 
 .doctor_career strong {
@@ -719,13 +733,286 @@ header .inner nav ul li a:hover {
 
 .doctor_career p {
     margin: 7px 0;
-    color: #666;
-    font-size: 13px;
-    line-height: 1.4;
+}
+
+/*둘러보기 place */
+#place{
+    margin: 200px 0;
+}
+#place .title_box .title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#place .title_box .title img {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+
+     width: clamp(90px, 11.25vw, 150px);
+}
+
+#place .title_box {
+    text-align: center;
+}
+
+#place .title_box .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#place .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(24px, 3vw, 40px);
+    white-space: nowrap;
+}
+
+#place .swiper-pagination-bullet-active{
+    background-color: #fff;
+}
+
+/* =========================
+   오시는 길
+========================= */
+
+#location {
+   margin: 200px 0;
+
+}
+
+#location .inner{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+#location iframe{
+   width: 831px;
+    height: 626px;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.location_title p:last-child{
+    margin-top: 15px;
+}
+
+#location .map{
+    display: flex;
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.call,
+.time{
+    display: flex;
+}
+.call_title,
+.time_title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.call{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.call_num{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.time ul li{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.time_day{
+    font-weight: 600;
+    width: 90px;
+}
+
+.time_info{
+    color:#BABABA;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 
+/* 예약 팝업 기본 상태 */
+.reservation-modal {
+    display: none;
 
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 360px;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+
+/* 팝업 열림 */
+.reservation-modal.is-open {
+    display: flex;
+}
+
+
+/* 팝업 박스 */
+.reservation-modal__box {
+    position: relative;
+
+    width: 380px;
+    padding: 40px;
+
+    background: #fff;
+    border-radius: 20px;
+
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 닫기 버튼 */
+.reservation-modal__close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 28px;
+    font-weight: 300;
+    color: #aaa;
+
+    cursor: pointer;
+}
+
+
+/* 제목 */
+.reservation-modal__title {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 500;
+    color: #555;
+}
+
+
+/* 입력 항목 */
+.reservation-form__item {
+    margin-bottom: 17px;
+}
+
+
+/* 라벨 */
+.reservation-form__item label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    color: #555;
+}
+
+
+/* 입력창 */
+.reservation-form__item input,
+.reservation-form__item select {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    box-sizing: border-box;
+
+    font-size: 13px;
+    color: #555;
+
+    outline: none;
+}
+
+
+/* 입력창 포커스 */
+.reservation-form__item input:focus,
+.reservation-form__item select:focus {
+    border-color: #bdb7e9;
+}
+
+
+/* 개인정보 동의 */
+.reservation-form__agree {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 23px 0;
+
+    font-size: 12px;
+    color: #777;
+
+    cursor: pointer;
+}
+
+.reservation-form__agree input {
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+}
+
+
+/* 예약하기 버튼 */
+.reservation-form__submit {
+    width: 100%;
+    height: 46px;
+
+    border: 0;
+    border-radius: 23px;
+
+    background: linear-gradient(90deg, #bdb7e9, #e8c8e7);
+
+    color: #fff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+/*푸터*/
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 135px;
+
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.footer_text {
+    text-align: left;
+    font-weight: 500;
+}
+  
 /*태블릿*/
 @media (max-width:1024px) {
 
