@@ -30,7 +30,7 @@ body {
 }
 
 .inner {
-    width: 1320px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -159,7 +159,7 @@ header .inner nav ul li a:hover {
     margin-left: 15px;
 }
 
-.title_wrap img{
+.title_wrap img {
     width: clamp(100px, 11.25vw, 180px) !important;
     height: auto;
 }
@@ -448,7 +448,7 @@ header .inner nav ul li a:hover {
 
 /*모바일케어*/
 #care2 {
-    padding: 100px 0;
+    padding-top: 100px;
 }
 
 
@@ -512,7 +512,7 @@ header .inner nav ul li a:hover {
 
 /*의료기기 소개*/
 .background {
-     background: url(../img/equipment_background.jpg);
+    background: url(../img/equipment_background.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -629,13 +629,17 @@ header .inner nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 800px;
+    min-height: clamp(600px, 55vw, 740px);
+}
+
+#doctor .title_box {
+    margin-bottom: 0;
 }
 
 .doctor_box {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 0px;
     transform: translateX(-50%);
     z-index: 2;
 
@@ -650,20 +654,20 @@ header .inner nav ul li a:hover {
 /* 의사 정보 전체 */
 .doctor_info {
     position: absolute;
-    top: 500px;
+    top: 400px;
     z-index: 3;
 }
 
 
 /* 왼쪽 */
 .doctor_left {
-    left: 15%;
+    left: clamp(10%, 15%, 20%);
 }
 
 
 /* 오른쪽 */
 .doctor_right {
-    right: 15%;
+    right: clamp(10%, 15%, 20%);
 }
 
 
@@ -714,13 +718,14 @@ header .inner nav ul li a:hover {
     padding: 70px 30px 30px;
 
     background: #fff;
-    border-radius: 45px; 
-}
-.doctor_left .doctor_career{
-   text-align: right;
+    border-radius: 45px;
 }
 
-.doctor_right .doctor_career{
+.doctor_left .doctor_career {
+    text-align: right;
+}
+
+.doctor_right .doctor_career {
     text-align: left;
 }
 
@@ -736,9 +741,10 @@ header .inner nav ul li a:hover {
 }
 
 /*둘러보기 place */
-#place{
-    margin: 200px 0;
+#place {
+    margin: 200px 0 0 0;
 }
+
 #place .title_box .title {
     display: flex;
     align-items: center;
@@ -750,7 +756,7 @@ header .inner nav ul li a:hover {
     height: auto;
     flex-shrink: 0;
 
-     width: clamp(90px, 11.25vw, 150px);
+    width: clamp(90px, 11.25vw, 150px);
 }
 
 #place .title_box {
@@ -772,7 +778,7 @@ header .inner nav ul li a:hover {
     white-space: nowrap;
 }
 
-#place .swiper-pagination-bullet-active{
+#place .swiper-pagination-bullet-active {
     background-color: #fff;
 }
 
@@ -781,66 +787,90 @@ header .inner nav ul li a:hover {
 ========================= */
 
 #location {
-   margin: 200px 0;
+    padding: 200px 0;
 
 }
 
-#location .inner{
+#location .inner {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 90px;
 }
 
-#location iframe{
-   width: 831px;
-    height: 626px;
+#location iframe {
+    width: 831px;
+    aspect-ratio: 831 / 626;
+    height: auto;
     border-radius: 22px;
     overflow: hidden;
 }
 
-.location_title p:last-child{
+.location_title p:last-child {
     margin-top: 15px;
 }
 
-#location .map{
+#location .map {
     display: flex;
     gap: 25px;
     margin: 35px 0;
 }
 
+.location_fix1,
+.location_fix2 {
+    position: absolute;
+}
+
+.location_fix1 {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.location_fix2 {
+    right: 5%;
+    top: 10%;
+}
+
+#location {
+    position: relative;
+}
+
 .call,
-.time{
+.time {
     display: flex;
 }
+
 .call_title,
-.time_title{
+.time_title {
     font-weight: bold;
     font-size: 20px;
     margin-right: 30px;
 }
 
-.call{
+.call {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
-.call_num{
+.call_num {
     font-size: 40px;
     font-weight: bold;
 }
 
-.time ul li{
+.time ul li {
     display: flex;
     margin-bottom: 10px;
 }
 
-.time_day{
+.time_day {
     font-weight: 600;
     width: 90px;
 }
 
-.time_info{
-    color:#BABABA;
+.time_info {
+    color: #BABABA;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -997,22 +1027,55 @@ header .inner nav ul li a:hover {
     cursor: pointer;
 }
 
-/*푸터*/
-  footer {
+/* 푸터 */
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 135px;
-
     background-color: var(--dark);
-    color: #fff;
+    color: #DBE9F9;
+    padding: 80px 0;
 }
 
 .footer_text {
     text-align: left;
     font-weight: 500;
 }
-  
+
+.footer_text p:first-child {
+    padding-bottom: 40px;
+}
+
+.footer_text ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer_text ul li {
+    padding-right: 10px;
+    border-right: 2px solid #DBE9F9;
+    margin-bottom: 5px;
+}
+
+.footer_text ul li:last-child {
+    padding-right: 0;
+    border: none;
+}
+
+.footer_img {
+    width: clamp(180px, 20vw, 300px);
+    height: auto;
+}
+
+#location2 {
+    display: none;
+}
+
+.eq_bottom_text {
+    display: none;
+}
+
 /*태블릿*/
 @media (max-width:1024px) {
 
@@ -1154,8 +1217,182 @@ header .inner nav ul li a:hover {
         display: none;
     }
 
-}
+    /*태블릿 - 의료진 소개*/
+    #doctor {
+        min-height: auto;
+        padding-bottom: 0;
+        /* 여기 삭제/0으로 */
+    }
 
+    .doctor_box {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        margin: 0 auto;
+        width: clamp(280px, 50vw, 500px);
+    }
+
+    .doctor_career {
+        display: none;
+    }
+
+
+    .doctor_info {
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        padding-top: 70px;
+    }
+
+    .doctor_left {
+        left: 25%;
+    }
+
+    .doctor_right {
+        right: 25%;
+    }
+
+    .doctor_left.active .doctor_career,
+    .doctor_right.active .doctor_career {
+        display: block;
+    }
+
+    .doctor_left.active .doctor_name,
+    .doctor_right.active .doctor_name {
+        display: none;
+    }
+
+    .doctor_left.active .doctor_career .doctor_name {
+        top: -50px;
+    }
+
+    .doctor_career {
+        display: none;
+        position: absolute;
+        top: -50%;
+        left: 80%;
+        transform: translateX(-50%);
+        z-index: 5;
+        text-align: center;
+        /* 추가 */
+    }
+
+    .doctor_left .doctor_career,
+    .doctor_right .doctor_career {
+        text-align: center;
+        /* desktop의 right/left 정렬 무효화 */
+    }
+
+    /*태블릿 - 오시는길*/
+    #location {
+        display: none;
+    }
+
+    #location2 {
+        padding: 60px 20px;
+        display: block;
+    }
+
+    #location2 .location_title2 {
+        text-align: center;
+    }
+
+    #location2 .location_title2 p:last-child {
+        margin-top: 8px;
+    }
+
+    #location2 .map_box2 iframe {
+        width: 100%;
+        height: 340px;
+    }
+
+    #location2 .map {
+        justify-content: center;
+        margin: 35px 0 50px 0;
+        display: flex;
+        gap: 30px;
+    }
+
+    #location2 .call2 {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #location2 .call_title {
+        margin-right: 0;
+    }
+
+    #location2 .time {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #location2 .time_title {
+        margin-bottom: 8px;
+        margin-right: 0;
+    }
+
+    #location2 .time_day {
+        width: 60px;
+    }
+
+    #location2 .time_info {
+        margin-top: 8px;
+    }
+
+    #location2 .time {
+        text-align: center;
+    }
+
+    .location_title2 p:last-child {
+        margin-bottom: 40px;
+    }
+
+    .time ul li {
+        justify-content: center;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        font-size: 14px;
+        gap: 40px;
+        padding: 25px 0;
+    }
+
+    .footer_text {
+        text-align: center;
+    }
+
+    #about {
+        margin-top: 70px;
+    }
+
+    #equipment {
+        padding: 70px 0;
+    }
+
+    #place {
+        margin: 70px 0;
+    }
+
+    #location2 {
+        padding: 0 0 50px 0;
+    }
+
+    /*태블릿 - 의료기기*/
+    .eq_bottom_text {
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+}
 
 
 /*모바일*/
@@ -1234,8 +1471,6 @@ header .inner nav ul li a:hover {
 
     #care3 {
         display: block;
-
-        margin-bottom: 100px;
     }
 
 
@@ -1252,5 +1487,23 @@ header .inner nav ul li a:hover {
 
     .title_box {
         margin-bottom: 50px;
+    }
+
+    /*모바일 - 헤더*/
+    header nav img {
+        height: 23px;
+    }
+
+    header nav ul.active {
+        top: 62px;
+        width: 50%;
+    }
+
+    #mb {
+        height: 70vh;
+    }
+    #mb img:first-child{
+        width: 50%;
+        top: 55%;
     }
 }

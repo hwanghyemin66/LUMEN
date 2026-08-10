@@ -32,26 +32,17 @@ topBtn.addEventListener("click", (e) => {
 // 1. 오른쪽 썸네일 Swiper
 const thumbSwiper = new Swiper(".careThumb", {
     direction: "vertical",
-    slidesPerView: "auto",      // 원본 컨텐츠 높이 유지
-    centeredSlides: true,       // 1번 슬라이드를 '중앙'에 배치
-    spaceBetween: 0,            // 이미지 사이 여백
-    loop: true,                 // 무한 루프 활성화
-    loopedSlides: 4,            // 슬라이드 전체 개수
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 0,
+    loop: true,
+    loopedSlides: 4,
     mousewheel: true,
     watchSlidesProgress: true,
 
-    // ⭐ [핵심 추가] 클릭 시 클릭한 슬라이드를 세로 중앙으로 이동시킵니다.
     on: {
-        click: function (swiper) {
-            // clickedSlide가 존재하고, undefined가 아닐 때 동작
-            if (swiper.clickedSlide) {
-                // 클릭된 슬라이드의 realIndex(0, 1, 2, 3)를 구함
-                const realIndex = swiper.clickedSlide.dataset.swiperSlideIndex;
-                if (realIndex !== undefined) {
-                    // 해당 index 위치를 중앙으로 부드럽게 이동 (400ms)
-                    swiper.slideToLoop(parseInt(realIndex, 10), 400);
-                }
-            }
+        slideChangeTransitionEnd: function (swiper) {
+            mainSwiper.slideToLoop(swiper.realIndex, 400);
         }
     }
 });
@@ -59,18 +50,12 @@ const thumbSwiper = new Swiper(".careThumb", {
 // 2. 왼쪽 메인 Swiper
 const mainSwiper = new Swiper(".care_swiper", {
     effect: "fade",
-    fadeEffect: {
-        crossFade: true
-    },
-    loop: true,                 // 메인 스와이퍼도 함께 loop 처리
-    loopedSlides: 4,            // 썸네일과 동일한 개수로 지정
-    allowTouchMove: false,      // 메인은 드래그 방지
-    thumbs: {
-        swiper: thumbSwiper
-    }
+    fadeEffect: { crossFade: true },
+    loop: true,
+    loopedSlides: 4,
+    allowTouchMove: false,
+    // thumbs: { swiper: thumbSwiper }  ← 이 줄 완전히 삭제!
 });
-
-
 
 //모바일 케어
 const care3Swiper = new Swiper('.care3_swiper', {
@@ -86,10 +71,10 @@ const mobileProgramSwiper = new Swiper('.mobile_program_swiper', {
     },
 });
 
-//의료기기 스와이퍼
+// 의료기기 스와이퍼
 var swiper = new Swiper('.eq_swiper', {
-    slidesPerView: 6.2,
-    spaceBetween: 25,
+    slidesPerView: 1.5, // 기본값 (가장 작은 모바일 기기)
+    spaceBetween: 15,   // 모바일 여백
     centeredSlides: true,
     loop: true,
     slideToClickedSlide: true,
@@ -97,55 +82,88 @@ var swiper = new Swiper('.eq_swiper', {
         el: '.eq_pg',
         clickable: true,
     },
+    // 화면 너비에 따른 반응형 설정
+    breakpoints: {
+        // 화면 너비 >= 480px (큰 모바일 / 태블릿)
+        480: {
+            slidesPerView: 2.3,
+            spaceBetween: 15,
+        },
+        // 화면 너비 >= 768px (태블릿)
+        768: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+        },
+        // 화면 너비 >= 1024px (작은 모니터)
+        1024: {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+        },
+        // 화면 너비 >= 1400px (데스크톱 - PC)
+        1400: {
+            slidesPerView: 6.2,
+            spaceBetween: 25,
+        }
+    }
+});
+
+//의료진소개-태블릿 버튼
+document.addEventListener('click', (e) => {
+    const cards = document.querySelectorAll('.doctor_left, .doctor_right');
+    const clickedCard = e.target.closest('.doctor_left, .doctor_right');
+
+    cards.forEach(card => {
+        if (card === clickedCard) {
+            card.classList.toggle('active');
+        } else {
+            card.classList.remove('active');
+        }
+    });
+});
+
+//둘러보기 스와이퍼
+var swiper = new Swiper('.place_swiper', {
+    pagination: {
+        el: '.place_pg',
+    },
+});
+
+// 예약 버튼들을 한번에 선택 (.reservation-btn, .header_reservation_btn)
+const reservationBtns = document.querySelectorAll(".reservation-btn, .header_reservation_btn");
+const reservationModal = document.querySelector(".reservation-modal");
+const reservationClose = document.querySelector(".reservation-modal__close");
+const reservationForm = document.querySelector(".reservation-form");
+
+
+// 모든 예약 버튼에 열기 이벤트 등록
+reservationBtns.forEach(btn => {
+    btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        reservationModal.classList.add("is-open");
+    });
 });
 
 
-//둘러보기 스와이퍼
-  var swiper = new Swiper('.place_swiper', {
-        pagination: {
-          el: '.place_pg',
-        },
-      });
-
-//예약팝업
-    const reservationBtn = document.querySelector(".reservation-btn");
-    const reservationModal = document.querySelector(".reservation-modal");
-    const reservationClose = document.querySelector(".reservation-modal__close");
-    const reservationForm = document.querySelector(".reservation-form");
+// 예약 팝업 닫기
+reservationClose.addEventListener("click", function () {
+    reservationModal.classList.remove("is-open");
+});
 
 
-    // 예약 팝업 열기
-    reservationBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        reservationModal.classList.add("is-open");
-    });
-
-
-    // 예약 팝업 닫기
-    reservationClose.addEventListener("click", function () {
+// 팝업 바깥쪽 클릭하면 닫기
+reservationModal.addEventListener("click", function (event) {
+    if (event.target === reservationModal) {
         reservationModal.classList.remove("is-open");
-    });
+    }
+});
 
 
-    // 팝업 바깥쪽 클릭하면 닫기
-    reservationModal.addEventListener("click", function (event) {
+// 예약하기
+reservationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        if (event.target === reservationModal) {
-            reservationModal.classList.remove("is-open");
-        }
+    alert("예약 신청이 완료되었습니다.");
 
-    });
-
-
-    // 예약하기
-    reservationForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        alert("예약 신청이 완료되었습니다.");
-
-        reservationModal.classList.remove("is-open");
-        reservationForm.reset();
-
-    });
+    reservationModal.classList.remove("is-open");
+    reservationForm.reset();
+});
