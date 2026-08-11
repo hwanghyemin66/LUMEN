@@ -79,7 +79,7 @@ header {
     background-color: var(--dark);
 
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -348,6 +348,7 @@ header .inner nav ul li a:hover {
 
     transform: translate(-50%, -25%);
     color: #fff;
+
 }
 
 #care .title_box .sub_title {
@@ -432,7 +433,7 @@ header .inner nav ul li a:hover {
 
 .care_num {
     font-family: "Marcellus", serif;
-    font-size: 64px;
+    font-size: clamp(45px, 5vw, 64px);
     display: block;
 }
 
@@ -485,7 +486,6 @@ header .inner nav ul li a:hover {
 }
 
 .care_num {
-    font-size: 64px;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -504,6 +504,7 @@ header .inner nav ul li a:hover {
 #care3 {
     display: none;
 }
+
 
 /*모바일 프로그램 안보이게 하기*/
 #mobile_program {
@@ -847,6 +848,9 @@ header .inner nav ul li a:hover {
     font-weight: bold;
     font-size: 20px;
     margin-right: 30px;
+
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .call {
@@ -1076,6 +1080,11 @@ footer {
     display: none;
 }
 
+.m_d_n1,
+.m_d_n2 {
+    display: none;
+}
+
 /*태블릿*/
 @media (max-width:1024px) {
 
@@ -1235,6 +1244,7 @@ footer {
 
     .doctor_career {
         display: none;
+        padding: 30px;
     }
 
 
@@ -1374,7 +1384,7 @@ footer {
     }
 
     #place {
-        margin: 70px 0;
+        margin: 70px 0 0 0;
     }
 
     #location2 {
@@ -1398,7 +1408,7 @@ footer {
 /*모바일*/
 @media (max-width:768px) {
     .inner {
-        width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
     }
 
     .about_img_box {
@@ -1433,7 +1443,7 @@ footer {
 
     .mobile_care_text_box {
         position: absolute;
-        bottom: 10%;
+        bottom: 14%;
         left: 50%;
         transform: translateX(-50%);
         color: #fff;
@@ -1451,11 +1461,6 @@ footer {
     .mobile_program img {
         display: block;
         margin: 0 auto;
-    }
-
-    .img_border {
-        border-radius: 22px;
-        overflow: hidden;
     }
 
     #mobile_program .swiper-slide {
@@ -1495,15 +1500,51 @@ footer {
     }
 
     header nav ul.active {
-        top: 62px;
+        top: 70px;
         width: 50%;
+
+        height: calc(100vh - 80px);
     }
 
     #mb {
         height: 70vh;
     }
-    #mb img:first-child{
+
+    #mb img:first-child {
         width: 50%;
         top: 55%;
     }
+
+    /*모바일 - 오시는길*/
+    .location_fix1 {
+        display: none;
+    }
+
+    /*모바일 - 의료진소개*/
+    .doctor_left,
+    .doctor_right {
+        display: none;
+    }
+
+    #doctor .doctor_box img {
+        margin-top: 20px;
+    }
+
+    .m_d_n1,
+    .m_d_n2 {
+        display: block;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .m_d_n1 {
+        left: 25%;
+        bottom: -10%;
+    }
+
+    .m_d_n2 {
+        right: 25%;
+        bottom: -10%;
+    }
+
 }
