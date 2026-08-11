@@ -46,6 +46,8 @@ body {
 .title {
     font-size: clamp(26px, 4vw, 45px);
     font-weight: 600;
+
+    word-break: keep-all;
 }
 
 .sub_title {
@@ -53,8 +55,12 @@ body {
     color: var(--eg_title);
     font-family: "Marcellus", serif;
     margin-bottom: 20px;
-}
 
+    word-break: keep-all;
+}
+.title_box p{
+    word-break: keep-all;
+}
 p {
     line-height: 1.5;
 }
