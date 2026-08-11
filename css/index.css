@@ -143,11 +143,15 @@ header .inner nav ul li a:hover {
     margin-top: 200px;
     margin-bottom: 200px;
 }
-
 .about_all_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#about .title img{
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .title_wrap {
