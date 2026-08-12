@@ -167,3 +167,4 @@ reservationForm.addEventListener("submit", function (event) {
     reservationModal.classList.remove("is-open");
     reservationForm.reset();
 });
+

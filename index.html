@@ -14,12 +14,13 @@
 
   <link rel="stylesheet" href="https://use.typekit.net/ddn6hgf.css" />
 
-   <!--meta tag-->
-    <meta property="og:title" content="루멘피부과의원">
-    <meta property="og:description" content="빛처럼 맑고 건강한 피부를 위한 피부과">
-    <meta property="og:image" content="https://hwanghyemin66.github.io/monglehae/images/meta-img-mongle.jpg"><!--이미지 크기 1200x630-->
-    <meta property="og:url" content="https://hwanghyemin66.github.io/monglehae/">
-    <meta property="og:type" content="website">
+  <!--meta tag-->
+  <meta property="og:title" content="루멘피부과의원">
+  <meta property="og:description" content="빛처럼 맑고 건강한 피부를 위한 피부과">
+  <meta property="og:image" content="https://hwanghyemin66.github.io/LUMEN/img/img/lumen_kakao_banner.jpg">
+  <!--이미지 크기 1200x630-->
+  <meta property="og:url" content="https://hwanghyemin66.github.io/LUMEN/">
+  <meta property="og:type" content="website">
 
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
@@ -34,22 +35,28 @@
     <div class="inner">
       <nav>
         <a href="">
-          <img src="./img/header-logo.svg" alt="헤더로고" />
+          <img src="./img/header-logo.svg" alt="헤더로고"/>
         </a>
         <ul>
           <li><a href="#about">루멘소개</a></li>
           <li><a href="#program">프로그램</a></li>
-          <li><a href="#care">피부관리</a></li>
+          <li><a href="#care" class="pc-only">피부관리</a></li>
+          <!-- 태블릿용 메뉴 -->
+          <li class="tablet-only"><a href="#care2">피부관리</a></li>
+          <!-- 모바일용 메뉴 -->
+          <li class="mobile-only"><a href="#care3">피부관리</a></li>
           <li><a href="#equipment">보유장비</a></li>
           <li><a href="#doctor">의료진</a></li>
           <li><a href="#place">시설안내</a></li>
-          <li><a href="#location">오시는길</a></li>
+          <li><a href="#location" class="pc-location">오시는길</a></li>
+          <!--태블릿 이하 메뉴-->
+          <li><a href="#location2" class="tablet-location">오시는길</a></li>
         </ul>
 
         <div class="header_btn">
           <!--헤더예약버튼-->
           <div class="header_reservation_btn">
-            <img src="./img/header_ reservation_btn.png" alt="상담예약"/>
+            <img src="./img/header_ reservation_btn.png" alt="상담예약" />
           </div>
 
           <!--햄버거 버튼-->
@@ -412,7 +419,7 @@
 
     <div class="background">
       <section id="equipment">
-        <div class="title_box">
+        <div class="title_box inner">
           <p class="sub_title" style="color: #fff">EQUIPMENT</p>
           <p class="title">첨단 의료장비로 완성하는 정밀한 진료</p>
           <p class="title_text">
@@ -428,7 +435,7 @@
               <img src="./img/EQUIPMENT1.jpg" alt="인라이튼_피코레이저" />
               <div class="eq_hover_box">
                 <div class="eq_info">
-                  <p class="eq_title">인라이튼<br/>피코레이저</p>
+                  <p class="eq_title">인라이튼<br />피코레이저</p>
 
                   <ul class="eq_tags">
                     <li>색소</li>
@@ -439,7 +446,7 @@
               </div>
               <p class="eq_bottom_text">인라이튼 <br>피코레이저</p>
             </div>
-            
+
             <!--의료기기1-->
 
             <div class="swiper-slide eq_swiper_slide">
@@ -573,7 +580,7 @@
             <!--의료기기9-->
 
             <div class="swiper-slide eq_swiper_slide">
-              <img src="./img/EQUIPMENT10.jpg" alt="더모스코피"/>
+              <img src="./img/EQUIPMENT10.jpg" alt="더모스코피" />
               <div class="eq_hover_box">
                 <div class="eq_info">
                   <p class="eq_title">더모스코피</p>
@@ -588,7 +595,7 @@
             <!--의료기기10-->
 
             <div class="swiper-slide eq_swiper_slide">
-              <img src="./img/EQUIPMENT11.jpg" alt="마크뷰"/>
+              <img src="./img/EQUIPMENT11.jpg" alt="마크뷰" />
               <div class="eq_hover_box">
                 <div class="eq_info">
                   <p class="eq_title">마크뷰</p>
@@ -623,8 +630,8 @@
       </section>
       <!--의료기기-->
 
-      <section id="doctor" class="inner">
-        <div class="title_box">
+      <section id="doctor">
+        <div class="title_box" class="inner">
           <p class="sub_title">LUMEN DOCTOR’S</p>
           <p class="title">아름다움을 설계하는 전문성</p>
           <p class="title_text">
@@ -670,11 +677,11 @@
         </div>
         <!-- 오른쪽 의사 정보 -->
 
-<!--의료진소개 모바일 이름,경력-->
-    <div class="m_doctor_name">
-     <img src="./img/doctor_name_circle1.png" alt="남의사" class="m_d_n1">
-     <img src="./img/doctor_name_circle1.png" alt="여의사" class="m_d_n2">
-    </div>
+        <!--의료진소개 모바일 이름,경력-->
+        <div class="m_doctor_name">
+          <img src="./img/doctor_name_circle1.png" alt="남의사" class="m_d_n1">
+          <img src="./img/doctor_name_circle2.png" alt="여의사" class="m_d_n2">
+        </div>
 
       </section>
       <!--의료진 소개-->
@@ -845,13 +852,13 @@
       <p>개인정보처리방침 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이용약관 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비급여수가</p>
 
       <ul>
-        <li>LUMEN 피부과의원</li>
+        <li class="mobile_no_border">LUMEN 피부과의원</li>
         <li>부산광역시 부산진구 서면로 12번길 34-5 1층</li>
       </ul>
 
       <ul>
         <li>대표자 : 홍길동</li>
-        <li>사업자번호 : 123-45-67890</li>
+        <li class="mobile_no_border">사업자번호 : 123-45-67890</li>
         <li>Tel. 051.1234.5678</li>
       </ul>
       <p>ⓒ 루멘피부과의원.All rights reserved.</p>

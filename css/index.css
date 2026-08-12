@@ -58,9 +58,11 @@ body {
 
     word-break: keep-all;
 }
-.title_box p{
+
+.title_box p {
     word-break: keep-all;
 }
+
 p {
     line-height: 1.5;
 }
@@ -673,7 +675,7 @@ header .inner nav ul li a:hover {
 
 /* 왼쪽 */
 .doctor_left {
-    left: clamp(10%, 15%, 20%);
+    left: clamp(15%, -10%, 20%);
 }
 
 
@@ -1096,8 +1098,26 @@ footer {
     display: none;
 }
 
+/*피부관리 헤더*/
+.tablet-only,
+.mobile-only {
+    display: none;
+}
+
+/*오시는길 헤더*/
+.tablet-location {
+    display: none;
+}
+
 /*태블릿*/
 @media (max-width:1024px) {
+
+    /*태블릿 상담예약*/
+    .reservation-modal {
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
 
     /*태블릿 - 헤더*/
     nav ul {
@@ -1140,6 +1160,17 @@ footer {
         transform: translateX(100%);
         /* 2. 움직임 부드럽게 만들기 (0.3초 동안 ease-in-out 전환) */
         transition: transform 0.3s ease-in-out;
+    }
+
+    .pc-only,
+    .mobile-only,
+    .pc-location {
+        display: none;
+    }
+
+    .tablet-only,
+    .tablet-location {
+        display: list-item;
     }
 
     nav ul.active {
@@ -1376,14 +1407,23 @@ footer {
     }
 
     footer {
-        flex-wrap: wrap;
-        font-size: 14px;
-        gap: 40px;
-        padding: 25px 0;
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+        text-align: center;
     }
 
-    .footer_text {
+    .footer_text ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer p {
         text-align: center;
+    }
+
+    footer ul .mobile_no_border {
+        border: none;
     }
 
     #about {
@@ -1395,7 +1435,7 @@ footer {
     }
 
     #place {
-        margin: 70px 0 0 0;
+        margin: 100px 0 0 0;
     }
 
     #location2 {
@@ -1418,155 +1458,174 @@ footer {
 
 /*모바일*/
 @media (max-width:768px) {
-    .inner {
-        max-width: calc(100% - 40px);
-    }
 
-    .about_img_box {
-        width: 100%;
-    }
-
-    .program_img_box {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    /*모바일 - 프로그램 */
-    #mobile_program .swiper-slide p {
-        font-size: 22px;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    #mobile_program {
-        display: block;
-        margin-bottom: 100px;
-    }
+    .pc-only,
+    .tablet-only,
+    {
+    display: none;
+}
 
 
-    .mobile_care_swiper_box {
-        position: relative;
-    }
+.mobile-only,
+{
+display: list-item;
+}
 
-    .mobile_program_pg {
-        margin-bottom: 45px;
-    }
+.inner {
+    max-width: calc(100% - 40px);
+}
 
-    .mobile_care_text_box {
-        position: absolute;
-        bottom: 14%;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        text-align: center;
-    }
+.about_img_box {
+    width: 100%;
+}
 
-    .swiper-pagination-bullet-active {
-        background-color: #fff;
-    }
+.program_img_box {
+    grid-template-columns: repeat(1, 1fr);
+}
 
-    #program {
-        display: none;
-    }
+/*모바일 - 프로그램 */
+#mobile_program .swiper-slide p {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
 
-    .mobile_program img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #mobile_program .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /*모바일 - 케어*/
-    #care2 {
-        display: none;
-    }
-
-    #care3 {
-        display: block;
-    }
+#mobile_program {
+    display: block;
+    margin-bottom: 100px;
+}
 
 
+.mobile_care_swiper_box {
+    position: relative;
+}
+
+.mobile_program_pg {
+    margin-bottom: 45px;
+}
+
+.mobile_care_text_box {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+#program {
+    display: none;
+}
+
+.mobile_program img {
+    display: block;
+    margin: 0 auto;
+}
+
+#mobile_program .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*모바일 - 케어*/
+#care2 {
+    display: none;
+}
+
+#care3 {
+    display: block;
+}
 
 
-    /*모바일 패딩마진 조절하기*/
-    #slogan {
-        padding-bottom: 70px;
-    }
 
-    #about {
-        margin-bottom: 70px;
-    }
 
-    .title_box {
-        margin-bottom: 50px;
-    }
+/*모바일 패딩마진 조절하기*/
+#slogan {
+    padding-bottom: 70px;
+}
 
-    /*모바일 - 헤더*/
-    header nav img {
-        height: 23px;
-    }
+#about {
+    margin-bottom: 70px;
+}
 
-    header nav ul.active {
-        top: 70px;
-        width: 50%;
+.title_box {
+    margin-bottom: 50px;
+}
 
-        height: calc(100vh - 80px);
-    }
+/*모바일 - 헤더*/
+header .inner {
+    width: calc(100% - 40px);
+}
 
-    #mb {
-        height: 70vh;
-    }
+header nav img {
+    height: 23px;
+}
 
-    #mb img:first-child {
-        width: 50%;
-        top: 55%;
-    }
+header nav ul.active {
+    top: 61px;
+    width: 50%;
 
-    /*모바일 - 오시는길*/
-    .location_fix1 {
-        display: none;
-    }
+    height: calc(100vh - 61px);
+}
 
-    /*모바일 - 의료진소개*/
-    .doctor_left,
-    .doctor_right {
-        display: none;
-    }
+#mb {
+    height: 70vh;
+}
 
-    #doctor .doctor_box img {
-        margin-top: 20px;
-    }
+#mb img:first-child {
+    width: 50%;
+    top: 55%;
+}
 
-    .m_d_n1,
-    .m_d_n2 {
-        display: block;
-        position: absolute;
-        z-index: 2;
-    }
+/*모바일 - 오시는길*/
+.location_fix1 {
+    display: none;
+}
 
-    .m_d_n1 {
-        left: 25%;
-        bottom: -10%;
-    }
+/*모바일 - 의료진소개*/
+.doctor_left,
+.doctor_right {
+    display: none;
+}
 
-    .m_d_n2 {
-        right: 25%;
-        bottom: -10%;
-    }
+#doctor .doctor_box img {
+    margin-top: 20px;
+}
 
-    /* 모바일 - 둘러보기 */
-    #place .place_swiper .swiper-slide {
-        aspect-ratio: 5 / 3;
-    }
+.m_d_n1,
+.m_d_n2 {
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
 
-    #place .place_swiper .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.m_d_n1 {
+    left: 25%;
+    bottom: -10%;
+}
+
+.m_d_n2 {
+    right: 25%;
+    bottom: -10%;
+}
+
+/* 모바일 - 둘러보기 */
+#place .place_swiper .swiper-slide {
+    aspect-ratio: 5 / 3;
+}
+
+#place .place_swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 모바일 - 푸터 */
 
 }
