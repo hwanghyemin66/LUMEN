@@ -22,6 +22,9 @@
   <meta property="og:url" content="https://hwanghyemin66.github.io/LUMEN/">
   <meta property="og:type" content="website">
 
+  <!--AOS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
 
@@ -76,7 +79,7 @@
     <section id="about" class="inner">
       <div class="about_all_box">
         <div class="about_text_box">
-          <p class="sub_title">LUMEN DERMATOLOGY</p>
+          <p class="sub_title" >LUMEN DERMATOLOGY</p>
           <p class="title">피부 본연의 빛을</p>
           <div class="title_wrap">
             <p class="title">다시 밝혀주는<img src="./img/title-lumen.png" alt="루멘타이틀" /></p>
@@ -129,7 +132,7 @@
     <!--slogan-->
 
     <section id="program" class="inner">
-      <div class="title_box">
+      <div class="title_box" data-aos="fade-down">
         <p class="sub_title">PROGRAMS</p>
         <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
         <p class="title_text">
@@ -169,7 +172,7 @@
     <!--program-->
 
     <section id="mobile_program">
-      <div class="title_box">
+      <div class="title_box" data-aos="fade-down">
         <p class="sub_title">PROGRAMS</p>
         <p class="title">피부 고민에 맞춘 맞춤 프로그램</p>
         <p class="title_text">
@@ -211,7 +214,7 @@
 
     <section id="care">
       <!-- 왼쪽 메인 스와이퍼 (50%) -->
-      <div class="title_box">
+      <div class="title_box" data-aos="fade-down">
         <p class="sub_title">LUMEN CARE PROCESS</p>
         <p class="title">피부를 위한 <br>체계적인 케어 시스템</p>
         <p class="title_text">
@@ -289,7 +292,7 @@
     <!--care-->
 
     <section id="care2">
-      <div class="title_box">
+      <div class="title_box" data-aos="fade-down">
         <p class="sub_title">LUMEN CARE PROCESS</p>
         <p class="title">피부를 위한 체계적인 케어 시스템</p>
         <p class="title_text">
@@ -355,7 +358,7 @@
     <!--태블릿 - 케어-->
 
     <section id="care3">
-      <div class="title_box" class="inner">
+      <div class="title_box" class="inner" data-aos="fade-down">
         <p class="sub_title">LUMEN CARE PROCESS</p>
         <p class="title">피부를 위한 체계적인 케어 시스템</p>
         <p class="title_text">
@@ -419,7 +422,7 @@
 
     <div class="background">
       <section id="equipment">
-        <div class="title_box inner">
+        <div class="title_box inner" data-aos="fade-down">
           <p class="sub_title" style="color: #fff">EQUIPMENT</p>
           <p class="title">첨단 의료장비로 완성하는 정밀한 진료</p>
           <p class="title_text">
@@ -631,7 +634,7 @@
       <!--의료기기-->
 
       <section id="doctor">
-        <div class="title_box" class="inner">
+        <div class="title_box" class="inner" data-aos="fade-down">
           <p class="sub_title">LUMEN DOCTOR’S</p>
           <p class="title">아름다움을 설계하는 전문성</p>
           <p class="title_text">
@@ -689,7 +692,7 @@
     <!--백그라운드-->
 
     <section id="place">
-      <div class="title_box">
+      <div class="title_box" data-aos="fade-down">
         <p class="sub_title">LUMEN PLACE</p>
         <p class="title">
           <img src="./img/title-lumen.png" alt="루멘 타이틀" />
@@ -873,7 +876,7 @@
       <div class="reservation-modal__box">
         <button type="button" class="reservation-modal__close">×</button>
 
-        <h2 class="reservation-modal__title">진료예약</h2>
+        <h2 class="reservation-modal__title">상담예약</h2>
 
         <form class="reservation-form">
           <!-- 이름 -->
@@ -939,5 +942,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
 <script src="./js/lumen.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
 
 </html>
